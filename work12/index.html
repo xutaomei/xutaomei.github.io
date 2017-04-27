@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>menu4</title>
+    <style>
+  body{
+  padding:0;
+  margin:0;
+  
+}
+
+.menu{
+    margin-top:20px;
+  height:48px;
+    background:orange;
+    box-shadow: 1px 2px rgba(0,0,0,.5);
+    text-align: center;
+    margin: 0;
+  }
+.menu ul{
+  margin:0;
+  list-style: none;
+    height:48px;
+  display:inline-block;
+}
+.menu li a:first-child{
+float: left;border-left:solid  1px rgba(0,0,0,0.2);
+}
+.menu ul{
+  list-style-type: none;
+  display: inline-block;
+    
+}
+.menu ul li{
+  float:left;
+  display:inline-block;
+  font-size: 20px;
+    width:160px;
+}
+.menu ul li a{
+  color:black;
+  text-decoration: none;
+  display: inline-block;
+}
+.menu ul li a i{
+  width: 20px;
+  height: 48px;
+}
+
+.menu li:hover {
+  color: #fff;
+  text-indent:50px;
+}
+.menu ul li{
+  width: 160px;
+     margin: 0;
+  float: left;border-left:solid  1px rgba(0,0,0,0.2);
+  position: relative;
+}
+.menu ul li a{
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  height: 48px;
+  line-height: 48px;
+
+}
+.menu ul li:hover a{
+  color: #fff;
+  margin-right:-10px ;
+  transform:scake(0) ;
+  
+}
+.menu ul li a i{
+  width: 20px;
+  height: 48px;
+  line-height: 48px;
+  margin-left: 0;
+  transform: all .5s;
+  opacity: 0;
+  text-decoration: all .5s;
+}
+
+  .menu ul li:hover a i{
+  width: 40px;
+  opacity: 1;
+  transform: ;
+  margin-right: 10px;
+}
+.menu ul li:last-child {
+  border-right:solid  1px rgba(0,0,0,0.2);
+}
+menu ul li a::after{
+  content:"";
+  position:absolute;
+  left:10%;
+  right:10%;
+  top:20%;
+  bottom: 0;
+  border-radius:100% ;
+  z-index: -1;
+}
+.menu ul li a:hover::after{
+  box-shodow:0px 2px 2px 1px rgba(0,0,0,0.4) ;
+}
+
+ </style>
+  </head>
+  <body>
+    <nav class="menu">
+      <ul>
+        <li><a href="#"><i class="fa fa-home"></i>首页</a></li>
+      </ul>
+      <ul>
+      <li><a href="#"><i class="fa fa-user"></i>关于</a></li>
+
+    </ul>
+    <ul>
+      <li><a href="#"><i class="fa fa-envelope"></i>联系</a></li>
+
+      </ul>
+    </nav>
+  
+  </body>
+</html>
