@@ -1,0 +1,76 @@
+.imgList figure{
+	float: left;
+	width: 25%;
+    margin: calc(10%/6);
+	overflow: hidden;
+	border: 10px solid rgba(255,255,255,1);
+	box-shadow: 0px 1px 6px 0px rgba(0,0,0,.5);
+	position: relative;
+	cursor: pointer;
+	}
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.imgList{
+	max-width: 1200px;
+	margin: auto;
+
+}
+.imgList figure img{
+	width: 100%;
+	-webkit-transform: scale(1) rotate(0deg);
+	-moz-transform: scale(1) rotate(0deg);
+	-ms-transform: scale(1) rotate(0deg);
+	-o-transform: scale(1) rotate(0deg);
+	transform: scale(1),rotate(0);
+}
+.imgList figure figcaption{
+	color: white;
+	top: 35%;
+	bottom: 35%;
+	left: 20%;
+	right: 30%;
+	text-align: center;
+	position: absolute;
+	border: 1px white solid;
+	border-bottom: none;
+	z-index: 2;
+	background-color:rgba(0,0,0,.2) ;
+	transform: all .5s;
+}
+.a figure:hover figcaption::before,
+.a figure:hover figcaption::after{
+	width: 20%;	
+}
+.imgList figure figcaption{
+	border: 1px solid #fff;
+	border-bottom: none;
+	position: absolute;
+	width: 60%;
+	height: 30%;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	z-index: 3;
+	background-color:rgba(0,0,0,.5);
+}
+
+.imgList figure figcaption p{
+	position: relative;
+	top: -5px;
+	opacity: 0;
+}
+.imgList figure:hover figcaption p{
+	opacity: 1;
+}
+.imgList figure:hover img{
+	-webkit-transform: scale(1.2) rotate(6deg);
+	-moz-transform: scale(1.2) rotate(6deg);
+	-ms-transform: scale(1.2) rotate(6deg);
+	-o-transform: scale(1.2) rotate(6deg);
+	transform: scale(1.2) rotate(6deg);
+}
