@@ -22,7 +22,7 @@ body{
 				height: 40px;
 				line-height: 40px;
 				margin: 10px 10px;
-		        border: 1px dashed lightblue;
+		                border: 1px dashed lightblue;
 				transition: all .5s;
 }
 .form input:hover{
@@ -33,12 +33,14 @@ body{
 	          color: black;
 	          width: 40%;
 	          height: 40px;
-              line-height: 40px;
-              position: absolute;
+                 line-height: 40px;
+                  position: absolute;
 	          left: 30%;
-		      right: 30%;
+		  right: 30%;
 	          bottom: -30px;
-	          background-color: rgba(50,50,100,.9);
+	         letter-spacing: 0px;
+	         background-color: blueviolet;
+	
 }
 .form input[type="submit"]:hover{
 				letter-spacing: 5px;
