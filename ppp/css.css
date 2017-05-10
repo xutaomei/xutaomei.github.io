@@ -1,0 +1,46 @@
+body{
+	background-color: aqua;
+}
+.form{
+	width: 400px;
+	height: 250px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom:0;
+	margin: auto;
+	background-color: whitesmoke;
+	text-align: center;
+}
+.form h3{
+				text-align: center;
+				margin: 10px 0px;
+}
+.form input{
+				width: 80%;
+				height: 40px;
+				line-height: 40px;
+				margin: 10px 10px;
+		        border: 1px dashed lightblue;
+				transition: all .5s;
+}
+.form input:hover{
+				border: 1px solid lightblue;
+				box-shadow: inset 0px 0px 6px 0px rgba(0,0,0,.5);
+}
+.form input [type="submit"]{
+	          color: black;
+	          width: 40%;
+	          height: 40px;
+              line-height: 40px;
+              position: absolute;
+	          left: 30%;
+		      right: 30%;
+	          bottom: -30px;
+	          background-color: rgba(50,50,100,.9);
+}
+.form input[type="submit"]:hover{
+				letter-spacing: 5px;
+				background-color: bisque;
+}
