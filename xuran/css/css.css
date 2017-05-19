@@ -1,0 +1,54 @@
+.log{
+	width: 80px;
+}
+header h1{
+	color: aliceblue;
+}
+body{
+	background: url("../img/pexels-photo-157120.jpeg") center top fixed;
+	background-size: 1500px;
+	color: aliceblue;
+}
+.logo img{
+	width: 80px;
+	height: auto;
+	float: left;
+	color: aliceblue;
+}
+.mainNav ul li a{
+	padding: 20px;
+	border: 1px solid transparent;
+	transition: color .5s,border .5s;
+}
+.mainNav ul li a:hover{
+	color: #000;
+	border: 1px solid #fff;
+}
+.mainNav ul li{
+	float: left;
+	margin: 20px 30px;
+	color: aliceblue;
+}
+header h2{
+	margin: 50px 0;
+	font-size: 30px;
+
+}
+h1{
+	opacity: 0;
+}
+main section{
+	margin: 50px 0px;
+}
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+ul{
+	list-style-type:none ;
+}
+header ul{
+	color: aliceblue;
+}
+}
