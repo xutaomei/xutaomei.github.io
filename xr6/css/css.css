@@ -1,0 +1,74 @@
+clearfix::after{
+	content: "";
+	clear: both;
+	display: block;
+}
+header .logo{
+	float: left;
+	top: 0;
+	z-index: 999;
+	width: 100%;
+	padding: 20px 0px;
+	background-color:rgba(0,0,0,.01);
+	transition: background-color .5s,padding .5s;
+}
+.topMenu ul li a{
+	padding:5 0px;
+    margin: 20px 20px;
+}
+header .logo span{
+	font-size: 3.6em;
+	font-family: 'Dancing Script', cursive;
+}
+header .topMenu{
+	float: right;
+}
+ul{
+	list-style-type: none;
+	padding: 0px;
+}
+
+body{
+	background: url("../img/banner.jpg") center top fixed;
+	background-size: 1500px;
+	color: aliceblue;
+}
+.container ul li{
+	float: left;
+	margin: 20px 20px;
+	color: aliceblue;
+}
+
+.banner .text{
+	max-width: 800px;
+	height: 180px;
+	color: antiquewhite;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+	line-height: 1.5;
+} 
+header ul li a{
+	color: aliceblue;
+	font-size: 20px;
+}
+header{
+	width: 100%;
+	padding: 20px 0px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color:rgba(0,0,0,.5);
+	transition: all .5s;
+	z-index: 1;
+}
+.banner .text h1{
+	text-align: center;
+}
+.banner .text h1 strong{
+	color: deepskyblue;
+}
