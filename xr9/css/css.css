@@ -1,0 +1,311 @@
+
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.topMenu ul li a{
+	padding: 0px  0px;
+    margin: 60px 20px;
+}
+
+ul{
+	list-style-type: none;
+	padding: 0px;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+.container{
+	max-width: 1200px;
+	margin: auto;
+	padding: 1px;
+	position: relative;
+}
+.container ul li{
+	float: left;
+	margin: 20px 20px;
+	color: aliceblue;
+}
+header.on{
+	padding: 5px 0px;
+	background-color:rgba(0,0,0,.8);
+}
+
+header .logo{
+	float: left;
+}
+header .logo span,
+header .logo img{
+	vertical-align: middle;
+}
+header .logo span{
+	font-size: 3.6em;
+	font-family: 'Dancing Script', cursive;
+}
+header .topMenu{
+	float: right;
+}
+header .topMenu ul li {
+	float: left;
+	margin: 60px 30px;
+}
+header .topMenu a{
+	text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+}
+header .topMenu a:hover{
+	color: #339BEB;
+}
+.container ul li{
+	float: left;
+	margin: 20px 20px;
+	color: aliceblue;
+}
+.banner{
+   background: url(../img/banner.jpg) no-repeat center top;
+}
+.banner .text{
+	max-width: 800px;
+	height: 180px;
+	color: #fff;
+	position: absolute;
+	margin: auto;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+	line-height: 1.5;
+} 
+.banner .text h1{
+	text-align: center;
+}
+.banner .text h1 strong{
+	color: #339BEB;
+}
+.banner .text p mark{
+	background-color: rgba(255,255,255,.5);
+	padding: 4px;
+	color: #000;
+}
+
+section h2{
+	text-align: center;
+	margin-top: 50px;
+}
+section h2+p{
+	text-align: center;
+	margin-bottom: 80px;
+	color: #000000;
+}
+.about .img{
+
+	width: 48%;
+	float: left;
+}
+.about .img img{
+	width: 100%;
+}
+.about .note{
+
+	width: 48%;
+	float: right;
+	line-height: 2;
+}
+.about .note p:first-child{
+	margin-top: 0;
+}
+.about .note ol{
+	padding: 0;
+	list-style: none;
+	counter-reset: a;
+}
+
+.about .note li::before{
+	content: counter(a);
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+
+	text-align: center;
+	line-height: 20px;
+	border-radius: 20px;
+	border: 1px dashed #000;
+	margin-right: 20px;
+
+}
+.about .note li:hover::before{
+
+	animation: go 2s;
+}
+
+.service{
+	background: url(../img/desktop.jpg) center center no-repeat;
+	background-size: cover;
+	position: relative;
+}
+.service .container{
+	z-index: 2;
+}
+.service::after{
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: rgba(0,0,0,.3);
+	box-shadow: inset 0px 0px 100px 50px rgba(0,0,0,.5);
+	z-index: 1;
+}
+.service li{
+	width: 48%;
+	float: left;
+	text-align: right;
+	min-height: 100px;
+	margin: 20px 0px;
+	cursor: pointer;
+}
+.service li::after{
+	content: '';
+	display: table;
+	clear: both;
+}
+.service li:nth-child(2n){
+	float: right;
+	text-align: left;
+}
+.service li i{
+	float: right;
+	padding: 5px 0px 5px 30px;
+	transition: transform .5s, color .5s;
+}
+
+.service li:nth-child(2n) i{
+	float: left;
+	padding: 5px 30px 5px 0px;
+}
+.service li:hover i{
+	color: darksalmon;
+	transform: scale(1.2) rotate(5deg);
+}
+.service li h3{
+	display: inline-block;
+	margin: 0;
+}
+.container figure{
+	float: left;
+	width: 19.1%;
+	margin: calc(8%/4);
+	overflow: hidden;
+	position: relative;
+}
+.case figure img{
+	width: 100%;
+	height: auto;
+}
+.case figure:hover img{
+	-webkit-transform: scale(1.2) rotate(6deg);
+	-moz-transform: scale(1.2) rotate(6deg);
+	-ms-transform: scale(1.2) rotate(6deg);
+	-o-transform: scale(1.2) rotate(6deg);
+	transform: scale(1.2) rotate(6deg);
+}
+.case figure figcaption{
+	position: absolute;
+	left: 3px;
+	right: 3px;
+	bottom: 3px;
+	background-color: rgba(255,255,255,0.5);
+	
+}
+.case figure figcaption .time .month{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+.case figure figcaption h3{
+	margin: 5px 0px 0px 70px;
+}
+.case figure figcaption p{
+	line-height: 1.5;
+	font-size: 0.8em;
+}
+.case figure:nth-child(4n){
+	margin-right: 0;
+}
+.vcontact{
+	min-height: 480px;
+    background: url(../img/android-1869510_1920.jpg) no-repeat center top;
+	background-size: cover;
+}
+.zcontact .right textarea{
+	color: #000;
+	height: 50px;
+	width: 100%;
+}
+.zcontact  ul li{
+	color: aliceblue;
+}
+.zcontact  p{
+	color: aliceblue;
+}
+.vcontact h2{
+	color: aliceblue;
+} 
+.vcontact h2 p{
+	color: aliceblue;
+} 
+.zcontact .left{
+	margin-left: 200px;
+	width: 40%;
+	float: left;	
+	font-size: 0.9em;
+}
+
+.zcontact .left ul li{
+	padding: 5px 2px;
+}
+.zcontact .left ul li i{
+	padding-right: 10px;
+}
+.zcontact .right{
+	width: 40%;
+	float: right;
+	margin-right: 80px;
+	margin-top: 80px;
+}
+.zcontact .right input,
+.zcontact .right textarea{
+	 width: 100%;
+	 height: 40px;
+	 border: none;
+	 outline: none;
+	 border-radius: 10px;
+	 padding: 10px 0px;
+	 margin: 10px 0;
+	 background-color: rgba(255,255,255,.6);
+   font-size: 0.8em;
+}
+.zcontact .right textarea{
+	color:black;
+	height: 50px;
+	width: 100%;
+}
+
+.zcontact .right input:nth-last-child(1){
+	color: #000;
+	letter-spacing: 2px;
+	transition: font-size.5s;
+	cursor: pointer;
+}
+.zcontact .right input:hover:nth-last-child(1){
+	font-size: 1.2em;
+}
+footer .banquan{
+	width: 100%;
+	height: 50px;
+	background-color: rgba(0,0,0,.8);
+}
+footer .banquan{
+	color: aliceblue;
+}
