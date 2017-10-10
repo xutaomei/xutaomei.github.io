@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>模拟时钟</title>
+		<style type="text/css">
+			#clock{
+				background: url(../img/timg.jpg)  no-repeat;
+				background-size:100% ;
+				height: 600px;
+				width: 500px;
+				position: relative;
+				}
+				#hour{
+					height: 10%;
+					width: 0.6%;
+					background-color: black;
+					top: 28%;
+					left: 54.2%;
+					position: absolute;
+		            -webkit-transform-origin: 50% 100%;
+				}
+				#min{
+					height: 15%;
+					width: 0.6%;
+					background-color: black;
+					top: 23%;
+					left: 54.5%;
+					position: absolute;
+					-webkit-transform-origin: 50% 100%;
+				}
+				#sec{
+					height: 18%;
+					width: 0.5%;
+					background-color: red;
+					top: 20%;
+					left: 53.5%;
+					position: absolute;
+		            -webkit-transform-origin: 50% 100%;
+				}
+		</style>
+	</head>
+	<body>
+		<div id="clock">
+			<div id="hour"></div>
+			<div id="min"></div>
+			<div id="sec"></div>
+		</div>
+		<script type="text/javascript">
+			var mydate;
+			var OClock=document.getElementById("clock");
+			var OHour=document.getElementById("hour");
+			var OMin=document.getElementById("min");
+			var OSec=document.getElementById("sec");
+			
+			function runTime(){
+				mydate=new Date();
+			    var sec=mydate.getSeconds()*6;
+				var min=(mydate.getMinutes()+mydate.getSeconds()/60)*6;
+				var hour=(mydate.getHours()+mydate.getMinutes()/60+mydate.getSeconds()/3600)*30;
+				OHour.style.webkitTransform="rotate("+hour+"deg)";
+				OMin.style.webkitTransform="rotate("+min+"deg)";
+				OSec.style.webkitTransform="rotate("+sec+"deg)";
+			}
+			setInterval("runTime()",100);
+		</script>
+	</body>
+</html>
