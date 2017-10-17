@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body{
+				background-image: url(img/timg.jpg);
+				background-size:100% ;
+				
+			}
+			h1{
+			color: cornflowerblue;
+			font-size:4em ;	
+			text-align:center ;
+			}
+			h2{
+				font-size:1em ;
+				color: darkslategray;
+				text-align:center;
+			}
+			.x{
+				text-align:center;
+			}
+			.button{
+           width:600px;
+            height:100px;
+            }
+		</style>
+	</head>
+	<body>
+		<h1>水果大作战</h1>
+		<h2>面对这么多的水果，你的选择是什么？</h2>
+		<div class="x">
+			<input type="button" value="香蕉"   style="width:100px;height:50px; color:gold"/>
+			<input type="button" value="苹果"  style="width:100px;height:50px;color: red;"/>
+			<input type="button" value="葡萄"  style="width:100px;height:50px;color:blueviolet;"/>
+			<input type="button" value="蓝莓"  style="width:100px;height:50px;color: cornflowerblue;"/>
+			<input type="button" value="桂圆"  style="width:100px;height:50px;color: sandybrown;"/>
+		
+		</div>
+		<script type="text/javascript">
+			var oBtnList=document.querySelectorAll(".x input");
+			for ( var i = 0; i < oBtnList.length; i++ ) {
+			 
+		  (function( index ){
+		 
+		    oBtnList[ i ].addEventListener( 'click', function(e){
+		      console.log( '你选择第' + index +"种水果" );
+		    });
+		 
+			  })( i+1 );
+		 
+		}
+			
+          for ( var i = 0; i < oBtnList.length; i++ ) {
+				oBtnList[ i ].addEventListener("click",(function(index){
+					return function(e){console.log( '你选择了' + index +"种水果" )};
+				}(i+1)));
+			}
+		</script>
+	</body>
+</html>
