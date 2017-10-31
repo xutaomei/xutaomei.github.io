@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>图片放大镜</title>
+		<div id="mirror"></div>
+    <div id="pic">
+        <img src="img/timg.jpg">
+    </div>
+    <style type="text/css">
+        body *{
+        margin: 0;
+        padding: 0;}
+        #mirror{
+         position: absolute;
+         overflow: hidden;
+         height: 200px;
+         width: 200px;
+         border-radius: 110px;
+         border:10px black solid;
+         background-image:url(img/timg.jpg);
+         }
+</style>
+    <script type="text/javascript">
+        var mirror = document.getElementById("mirror");
+        function moving(e){
+            var x = e.clientX;
+            var y = e.clientY;
+            var mirrorHeight = mirror.offsetHeight;
+            var mirrorWidth = mirror.offsetWidth;
+            var picHeight = document.getElementById("pic").getElementsByTagName("img")[0].offsetHeight;
+            var picWidth = document.getElementById("pic").getElementsByTagName("img")[0].offsetWidth;
+            if(x <= picWidth && y <= picHeight && x >= -picWidth && y>= -picHeight){
+                mirror.style.left = x - mirrorWidth/2 + "px";
+                mirror.style.top = y - mirrorHeight/2 + "px";
+                var bl = 2*mirror.offsetLeft;
+                var bt = 2*mirror.offsetTop;
+                mirror.style.backgroundPosition = "-"+(bl+mirrorWidth/2)+"px "+"-"+(bt+mirrorHeight/2)+"px";
+            }
+        }
+        window.onmousemove = function(e){
+            var e = e?e:window.event;
+            moving(e);
+        }
+    </script>
+	</body>
+
+</html>
