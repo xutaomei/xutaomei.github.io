@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>菜单</title>
+<style type="text/css">
+   *{
+	 margin:0; 
+	 padding:0;
+	}
+   #nav{
+   	width:100px; 
+   	margin:60px;
+   	}
+   #nav h3{
+   	 cursor:pointer;
+   	 line-height:30px; 
+   	 height:30px;
+   	 background-color:#000000;
+   	 color:#fff;
+   	 }
+   #nav a{
+   	display:block; 
+   	line-height:24px;
+   	color:#666666;
+   	}
+   #nav a:hover{
+   	background-color:#eee; 
+   	color:darkslateblue;
+   	}
+   #nav div{
+   	display:none; 
+   	border:1px solid #000;
+   	border-top:none;
+   	 }
+</style>
+<script type="text/javascript">
+    function $(id){
+    	return document.getElementById(id)
+    	}
+        window.onload = function(){
+         $("nav").onclick = function(e){
+         var src = e?e.target:event.srcElement;
+    if(src.tagName == "H3"){
+         var menu = src.nextElementSibling || src.nextSibling;
+         menu.style.display = (menu.style.display =="block")?"none":"block";
+     }
+   }
+ }
+</script>
+</head>
+<body>
+<div id="nav">
+ <h3>管理区</h3>
+  <div>
+   <a href="#">建议</a>
+    <a href="#">链接</a>
+    <a href="#">联系</a>
+  </div>
+  <h3>交流区</h3>
+  <div>
+   <a href="#">JavaScript</a>
+    <a href="#">css</a>
+    <a href="#">前端开发</a>
+  </div>
+  <h3>发言区</h3>
+  <div>
+   <a href="#">在线咨询</a>
+    <a href="#">留言</a>
+    <a href="#">提问</a>
+  </div>
+  <h3>学习区</h3>
+  <div>
+   <a href="#">在线帮助</a>
+    <a href="#">预约学习</a>
+    <a href="#">一对一辅导</a>
+  </div>
+</div>
+</body>
+</html>
