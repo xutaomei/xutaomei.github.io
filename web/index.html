@@ -1,0 +1,124 @@
+
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>逐行新闻滚动效果</title>
+		<meta charset="UTF-8" />
+		<style type="text/css">
+			body{
+				background-image: url(img/01837b58abcff4a801219c77cf4e76.jpg@1280w_1l_2o_100sh.jpg);
+			    background-size:100% ;
+				height: 500px;
+				width: 400px;
+				position: relative;
+			}
+			.menuContainer{
+				border:1px dashed dodgerblue;
+				width:40%;
+				height: 20%;
+				padding:6px 3px 3px 10px;
+				
+			}
+			.menu{
+				overflow:hidden;
+			}
+			a{
+				display:block;
+				font-size:20px;
+				line-height:25px;
+				text-align: center;
+	            text-decoration:none;
+				color:black;
+				font-family:Arial;
+			}
+			h1{
+			font-size:20px;	
+			color:powderblue;
+			}
+			h2{
+			font-size:20px;
+			color:powderblue;	
+			}
+			h3{
+			font-size:20px;
+			color:powderblue;	
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="menuContainer">
+			<div class="menu">
+				<a>凤兮凤兮归故乡，遨游四海求其凰。</a>
+				<a>时未遇兮无所将，何悟今兮升斯堂！</a>
+				<a>有艳淑女在闺房，室迩人遐毒我肠。</a>
+				<a>何缘交颈为鸳鸯，胡颉颃兮共翱翔！</a>
+				<a>凰兮凰兮从我栖，得托孳尾永为妃。</a>
+				<a>交情通意心和谐，中夜相从知者谁？</a>
+				<a>双翼俱起翻高飞，无感我思使余悲。</a>
+			</div>
+		</div>
+		<script language="javascript">
+			var n=2,
+				oMenu=document.querySelector(".menu"),
+				oMenuItem=document.querySelectorAll(".menu a"),
+				runHeight=oMenuItem[0].offsetHeight*n,
+				runFlag=true;
+			
+			oMenu.style.height=runHeight+"px";
+			oMenu.innerHTML+=oMenu.innerHTML;
+			
+			oMenu.addEventListener("mouseover",function(){runFlag=false});
+			oMenu.addEventListener("mouseout",function(){runFlag=true});
+			(function(){
+				var stop=oMenu.scrollTop%runHeight==0&&!runFlag;
+				if(!stop){
+					parseInt(oMenu.scrollTop)==parseInt(oMenu.scrollHeight/2)?oMenu.scrollTop=0:oMenu.scrollTop++;
+				}
+				setTimeout(arguments.callee,oMenu.scrollTop%runHeight==0?1000:10);
+			})();
+		</script>
+
+		<h1 class="title">
+             凤求凰
+	</h1>
+	<h2 class="text">
+	《凤求凰》传说是汉代文学家司马相如的古琴曲，演绎了司马相如与卓文君的爱情故事。
+	</h2>
+	<h3 class="xu">
+	以“凤求凰”为通体比兴，不仅包含了热烈的求偶，而且也象征着男女主人公理想的非凡，旨趣的高尚，知音的默契等丰富的意蕴。全诗言浅意深，音节流亮，感情热烈奔放而又深挚缠绵，融楚辞 骚体的旖旎绵邈和汉代民歌的清新明快于一炉。即使是后人伪托之作，亦并不因此而减弱其艺术价值。
+	</h3>
+	<script type="text/javascript">
+	function typeText(ele,speed,loop){
+	var oTitle=ele;
+	var str=oTitle.innerText;
+	var i=0;
+	var loop=loop||false;
+	oTitle.innerText="";
+	var a=setInterval(function (){
+	if (i<str.length){
+	oTitle.innerText+=str[i];
+	}else{
+	if (loop){
+	i=-1;
+	oTitle.innerText="";
+	}else{
+	clearInterval(a);
+	   }
+	 }
+	i++;
+	},speed);
+	}
+	var oH1=document.querySelector(".title");
+    var oH2=document.querySelector(".text");
+    var oH2=document.querySelector(".xu");
+    
+	typeText(oH1,100);
+	typeText(oH2,200,true);
+	</script>	
+
+	</body>
+
+</html>
